@@ -1,9 +1,7 @@
 export function createPageUrl(pageName: string) {
-  const formattedPage = pageName.replace(/ /g, '-');
-
-  if (formattedPage === 'Home') {
+  if (pageName === 'Home') {
     return '/';
   }
 
-  return '/' + formattedPage;
+  return '/' + pageName.replace(/ /g, '-');
 }
