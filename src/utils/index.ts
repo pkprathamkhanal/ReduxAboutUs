@@ -1,3 +1,9 @@
 export function createPageUrl(pageName: string) {
-    return '/' + pageName.replace(/ /g, '-');
+  const formattedPage = pageName.replace(/ /g, '-');
+
+  if (formattedPage === 'Home') {
+    return '/ReduxAboutUs/';
+  }
+
+  return '/ReduxAboutUs/' + formattedPage;
 }
