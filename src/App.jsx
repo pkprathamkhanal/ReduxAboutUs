@@ -21,7 +21,6 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
       <Toaster />
-
       <Routes>
         <Route
           path="/"
@@ -44,7 +43,10 @@ export default function App() {
           />
         ))}
 
-        <Route path="*" element={<div style={{ padding: "2rem", color: "white" }}>Page not found</div>} />
+        <Route
+          path="*"
+          element={<div style={{ padding: "2rem", color: "white" }}>Page not found</div>}
+        />
       </Routes>
     </QueryClientProvider>
   );
